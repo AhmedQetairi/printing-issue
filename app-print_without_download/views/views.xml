@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="app-print_without_download.list">
+      <field name="name">app-print_without_download list</field>
+      <field name="model">app-print_without_download.app-print_without_download</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="app-print_without_download.action_window">
+      <field name="name">app-print_without_download window</field>
+      <field name="res_model">app-print_without_download.app-print_without_download</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="app-print_without_download.action_server">
+      <field name="name">app-print_without_download server</field>
+      <field name="model_id" ref="model_app-print_without_download_app-print_without_download"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="app-print_without_download" id="app-print_without_download.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="app-print_without_download.menu_1" parent="app-print_without_download.menu_root"/>
+    <menuitem name="Menu 2" id="app-print_without_download.menu_2" parent="app-print_without_download.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="app-print_without_download.menu_1_list" parent="app-print_without_download.menu_1"
+              action="app-print_without_download.action_window"/>
+    <menuitem name="Server to list" id="app-print_without_download" parent="app-print_without_download.menu_2"
+              action="app-print_without_download.action_server"/>
+-->
+  </data>
+</odoo>
