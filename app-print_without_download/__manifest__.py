@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Report Options - Download, View, Print',
-    'version': '14.0.1.0.0',
-    'license': 'LGPL-3',
+    "version": "15.0.1.0.0",
+    "license": "AGPL-3",
     'summary': """shows a modal window with options for printing, downloading or opening pdf reports""",
     'description': """
         Choose one of the following options when printing a pdf report:
@@ -18,13 +18,24 @@
                'images/main_screenshot.png'
                ],
     'depends': ['web'],
+    
     'data': [
-        'views/templates.xml',
-        'views/ir_actions_report.xml',
+        
+        # 'views/ir_actions_report.xml',
     ],
-    'qweb': [
-        'static/src/xml/report_pdf_options.xml'
-    ],
-    'installable': True,
-    'auto_install': False,
+    
+    'assets': {
+        'web.assets_backend': [
+            
+            # "/app-print_without_download/static/src/js/qwebactionmanager.js",
+            # "/app-print_without_download/static/src/js/pdf_options.js",
+        ],
+        
+        'web.assets_qweb':[
+            # "/app-print_without_download/static/src/xml/report_pdf_options.xml",
+        ]
+    },
+    
+    "external_dependencies": {"python": ["dateutil"]},
+    "installable": True,
 }
