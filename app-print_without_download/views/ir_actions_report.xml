@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--     <data>
+    <data>
 
         <record id="act_report_view_inherit" model="ir.ui.view">
             <field name="name">ir.actions.report.inherit</field>
@@ -15,5 +15,5 @@
             </field>
         </record>
 
-    </data> -->
+    </data>
 </odoo>
